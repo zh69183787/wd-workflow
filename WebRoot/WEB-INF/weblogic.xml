@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://www.bea.com/ns/weblogic/90" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<context-root>/workflow</context-root>
+	<jsp-descriptor>
+	 	<keepgenerated>true</keepgenerated>
+    	<page-check-seconds>0</page-check-seconds>
+	 </jsp-descriptor>
+	<container-descriptor>
+		<servlet-reload-check-secs>0</servlet-reload-check-secs>
+  		<resource-reload-check-secs>0</resource-reload-check-secs>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	<session-descriptor>
+		<timeout-secs>3600</timeout-secs>
+       	<cookie-name>JSESSIONIDFLOW</cookie-name>
+       <!-- 	<persistent-store-type>replicated</persistent-store-type>
+        -->
+	</session-descriptor>    
+	<!-- 
+		当<session-timeout>设置为－2，表示将使用在weblogic.xml中设置的 
+		TimeoutSecs这个属性值。 
+		当<session-timeout>设置为－1，表示Session将永不过期，而忽略在 
+		weblogic.xml中设置的TimeoutSecs属性值。 
+	 -->
+	<!--  
+	<context-root>/上下文根</context-root>    -->
+</weblogic-web-app>

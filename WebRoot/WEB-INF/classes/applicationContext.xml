@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<description>
+		workflow Applications
+	</description>
+	<!-- =================================================================== -->
+	<!-- Context Define                                                      -->
+	<!-- =================================================================== -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+			</list>
+		</property>
+	</bean>
+		
+	<context:component-scan base-package="com.wonders" />
+	
+	<!-- =================================================================== -->
+	<!-- Data Source Define (jdbc & jndi)                                    -->
+	<!-- =================================================================== -->
+	<!-- JDBC Configuration-->
+	<bean id="stptinc"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="${hibernate.connection.driver_class}" />
+		<property name="url" value="${hibernate.connection.url}" />
+		<property name="username"
+			value="${hibernate.connection.username}" />
+		<property name="password"
+			value="${hibernate.connection.password}" />
+	</bean>
+
+	<!-- JNDI Configuration
+	
+	<bean id="stptinc" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/stptinc"/>
+	</bean>-->
+	<!-- =================================================================== -->
+	<!-- SessionFactory(For Hibernate)/ManagerFactory(For JPA) Define        -->
+	<!--  ONLY ONE OF THEM SHOULD BE USED                                    -->
+	<!-- =================================================================== -->
+	<!--  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" spring 2.5之后继承的工厂类 -->
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="stptinc" />
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml" />
+			<property name="packagesToScan"><!-- 自动扫描注解 -->
+		    <list>
+		        <value>com.wonders.*</value>
+		    </list>
+			</property>
+			<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/com/wonders</value>
+			</list>
+		</property>
+		<property name="configurationClass"  value="org.hibernate.cfg.AnnotationConfiguration"></property>
+		<property name="lobHandler" ref="${jdbc.handler}" />
+	</bean>
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id = "jdbcTemplate" class = "org.springframework.jdbc.core.JdbcTemplate">
+	    <property name = "dataSource" ref="stptinc"/>
+	</bean>
+	
+	<bean id="oracleLobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler">
+		<property name="nativeJdbcExtractor" ref="nativeJdbcExtractor" />
+	</bean>
+
+	<bean id="defaultLobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler">
+	</bean>
+
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor" lazy-init="true" />
+	
+	
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+       	<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="dsTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="stptinc" />
+		<qualifier value="stptinc"/>  <!-- “限定符” -->
+	</bean>
+	
+	
+	<tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>
+	
+	<!-- 
+		<aop:aspectj-autoproxy />有一个proxy-target-class属性，默认为false，
+		表示使用JDK动态代理织入增强，当配置 为<aop:aspectj-autoproxy proxy-target-class="true" />时，
+		表示使用CGLib动态代理技术织入增强。不过即使proxy-target-class设置为false，
+		如果目标类没有声明接口，则 Spring将自动使用CGLib动态代理。
+	 -->
+	<!-- jdk 动态代理  必须有接口实现-->
+	<aop:aspectj-autoproxy/>
+	<!-- 强制使用cglib 代理  针对类-->
+	<!-- <aop:aspectj-autoproxy proxy-target-class="true" />-->
+	
+	
+		<!-- 配置Hibernate TransactionManager -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!--  Transaction interceptor  -->
+	<!--<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="false"
+				propagation="REQUIRED" />
+			<tx:method name="find*" read-only="false"
+				propagation="REQUIRED" />
+			<tx:method name="insert*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="update*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="remove*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="delete*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="view*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="make*" rollback-for="Exception"
+				propagation="REQUIRED" />
+			<tx:method name="*" propagation="SUPPORTS"
+				read-only="false" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="assetServiceMethods"
+			expression="execution(* com.wonders.asset.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="assetServiceMethods" />
+	</aop:config>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(* com.wonders.asset.base.service..*.*(..))" id="baseServiceMethods"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="baseServiceMethods"/>
+	</aop:config>-->
+</beans>

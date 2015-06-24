@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts> 
+	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true"/>
+	<constant name="struts.multipart.maxSize" value="1073741824" />
+	<constant name="struts.messages.error.file.too.large" value="您上传的文件大小超过了20M限制，请分卷压缩后重新上传" />
+	<constant name="struts.messages.error.content.type.not.allowed" value="您所上传的文件类型不支持" />
+</struts>

@@ -1,0 +1,41 @@
+.seal {
+    width: 130px;
+    height: 55px;
+    padding: 9px;
+    text-align: center;
+    position: absolute;
+    background: url(default/images/seal.png) no-repeat;
+    left:650px;
+    top:50px;
+}
+
+.seal_bg1 {
+    background-position: top left;
+    color: #ed2125;
+}
+
+.seal_bg1 h1,.seal_bg1 h6 {
+    color: #ed2125;
+}
+
+.seal_bg2 {
+    background-position: left -73px;
+    color: #0c2f7d;
+}
+
+.seal_bg2 h1,.seal_bg2 h6 {
+    color: #0c2f7d;
+}
+
+.seal h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 0;
+}
+
+.seal h6 {
+    line-height: 12px;
+    font-weight: bold;
+    padding: 0;
+}

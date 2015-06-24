@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root date="2014-04-14" type="eamContractReview">
+	<basicData>
+		<id>XXXXXXXXXXXXXXXXXXXXXXXXX</id>
+		<projectName>轨道交通3号线FAS、BAS系统大修改造项目</projectName>
+		<projectIdentifier>2012-运三公司-001-大修项目</projectIdentifier>
+		<projectNum>沪地铁投（2012）132号</projectNum>
+		<projectCompany>上海地铁第三运营有限公司</projectCompany>
+		<projectChargeDept>第三运营公司</projectChargeDept>
+		<projectCharge>沈光怡</projectCharge>
+		<contractIdentifier>运三-G-13-大修-001-03-00-招</contractIdentifier>
+		<contractSelfNum>运三-G-13-大修-001-03-00-招</contractSelfNum>
+		<contractName>轨道交通3号线FAS、BAS大修改造工程合同</contractName>
+		<contractMoney>1598.3326</contractMoney>
+		<contractMoneyType>总价闭口</contractMoneyType>
+		<contractMoneyTypeId>1</contractMoneyTypeId>
+		<contractBudget>2562.45</contractBudget>
+		<purchaseType>公开招标</purchaseType>
+		<purchaseTypeId>1</purchaseTypeId>
+		<contractType1>运维类</contractType1>
+		<contractType1Id>2</contractType1Id>
+		<contractType2>工程类</contractType2>
+		<contractType2Id>2</contractType2Id>
+		<contractGroup>成本外</contractGroup>
+		<contractGroupId>2</contractGroupId>
+		<oppositeCompany>上海市安装工程有限公司</oppositeCompany>
+		<dealPerson>阮方</dealPerson>
+		<passTime>2013-04-28</passTime>
+		<signTime>2013-05-07</signTime>
+		<execPeriodStart>2013-05-07</execPeriodStart>
+		<execPeriodEnd>2015-02-28</execPeriodEnd>
+		<dealDeptSuggest></dealDeptSuggest>
+		<remark></remark>
+	</basicData>
+	
+	<approveData>
+		<approve>
+			<process>合同后审流程</process>
+			<incidentno>11</incidentno>
+			<dept>信息中心</dept>
+			<deptId>2925</deptId>
+			<username>ST/G080090002502925</username>
+			<stepname>部门业务人员处理</stepname>
+			<userfullname>孔琰</userfullname>
+			<remark>XZXXXXXXXXXXXXXXX</remark>
+			<upddate>2014-01-01 10:00:00</upddate>
+			<approveAttach>http://10.1.48.101:8080</approveAttach>
+		</approve>
+	</approveData>
+					
+	<registerData>
+		<processName>合同后审流程</processName>
+		<incidentNo>11</incidentNo>
+		<loginName>ST/G080090002502925</loginName>
+		<userName>孙佳伟</userName>
+		<deptId>2925</deptId>
+		<deptName>维保公司</deptName>
+		<stepName>返回修改</stepName>
+	</registerData>
+	
+</root>

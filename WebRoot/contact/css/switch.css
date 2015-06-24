@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.switch_table, .switch_table_1{
+	width:9px;
+	height:25px;
+	margin-right:5px;
+	background-repeat:no-repeat;
+	margin-left:-2px;
+}
+.switch_table{
+	background-position:left top;
+}
+.switch_table_1{
+	background-position:left -25px;
+}
+.switch_table:hover{
+	background-position:-9px top;
+}
+.switch_table_1:hover{
+	background-position:-9px -25px;
+}
+.switch_table, .switch_table_1{
+	background-image:url(../images/switch_table.png);
+}
+
+
+
+
+
+
+
+

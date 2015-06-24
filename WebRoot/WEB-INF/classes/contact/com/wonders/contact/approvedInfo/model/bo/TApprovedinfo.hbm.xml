@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.wonders.contact.approvedInfo.model.bo.TApprovedinfo" table="T_APPROVEDINFO" schema="STPT" dynamic-update="true" dynamic-insert="true">
+        <id name="guid" type="string">
+            <generator class="guid" />
+        </id>
+        <property name="process" type="string">
+            <column name="PROCESS" />
+        </property>
+        <property name="incidentno" type="long">
+            <column name="INCIDENTNO" precision="22" scale="0" />
+        </property>
+        <property name="dept" type="string">
+            <column name="DEPT" />
+        </property>
+        <property name="stepname" type="string">
+            <column name="STEPNAME" />
+        </property>
+        <property name="username" type="string">
+            <column name="USERNAME" />
+        </property>
+        <property name="userfullname" type="string">
+            <column name="USERFULLNAME" />
+        </property>
+        <property name="usermail" type="string">
+            <column name="USERMAIL" />
+        </property>
+        <property name="agree" type="long">
+            <column name="AGREE" precision="22" scale="0" />
+        </property>
+        <property name="disagree" type="long">
+            <column name="DISAGREE" precision="22" scale="0" />
+        </property>
+        <property name="returned" type="long">
+            <column name="RETURNED" precision="22" scale="0" />
+        </property>
+        <property name="sign" type="string">
+            <column name="SIGN" />
+        </property>
+        <property name="signdate" type="string">
+            <column name="SIGNDATE" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" />
+        </property>
+        <property name="upddate" type="timestamp">
+            <column name="UPDDATE" length="7" />
+        </property>
+        <property name="status" type="long">
+            <column name="STATUS" precision="22" scale="0" />
+        </property>
+        <property name="leaderId" type="string">
+            <column name="LEADER_ID" length="50" />
+        </property>
+        <property name="fllowFlag" type="string">
+            <column name="FLLOW_FLAG" length="50" />
+        </property>
+        <property name="readFlag" type="string">
+            <column name="READ_FLAG" length="50" />
+        </property>
+        <property name="planId" type="string">
+            <column name="PLAN_ID" length="100" />
+        </property>
+        <property name="optionCode" type="string">
+            <column name="OPTION_CODE" length="100" />
+        </property>
+        <property name="deptId" type="string">
+            <column name="DEPT_ID" length="200" />
+        </property>
+        <property name="fileGroupId" type="string">
+            <column name="FILE_GROUP_ID" length="38" />
+        </property>
+        <property name="rounds" type="java.lang.Integer">
+            <column name="ROUNDS"  />
+        </property>
+    </class>
+</hibernate-mapping>

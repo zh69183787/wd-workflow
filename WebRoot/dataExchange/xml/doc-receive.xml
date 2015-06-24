@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<basicData>
+		<chiefPerson>120404</chiefPerson>
+		<swId>下级单位</swId>
+		<chiefDep>12040401</chiefDep>
+		<swUnit>上海共和新路高架发展有限公司</swUnit>
+		<fileDate>2014-04-10</fileDate>
+		<filezh>沪府规 （2013） 号002</filezh>
+		<title>XXXXXXXXXXXXXXXXXXXX</title>
+		<keyword>XXXXXXXXXXXXXXXXXX</keyword>
+		<remark>XXXXXXXXXXXXXXX</remark>
+		<blMode>网上流转</blMode>
+		<!-- 
+		<swType>2014</swType>
+		<secretClass>普通</secretClass>
+		<num>2</num>
+		<priorities>普件</priorities>
+		<swDate>2014-04-15</swDate>
+		 -->
+		
+		
+	</basicData>
+	<attachData>
+		<attach>
+			<fileName>沪申案-30-人大主办-390-运营三公司</fileName>
+			<fileExtName>docx</fileExtName>
+			<path>http://10.35.91.3:8108/SHCONTR/upload/contractRefUpload/5be4b7ab-9e2b-4d76-8fda-afdf2b1d0715.pdf
+			</path>
+			<fileSize>642723</fileSize>
+			<uploader>翁励彬</uploader>
+			<uploadDate>2014-03-10 10:52:08</uploadDate>
+			<operateTime>1394419928280</operateTime>
+			<appName>eam_http</appName>
+			<uploaderLoginName>G08007001124</uploaderLoginName>
+			<memo>附件</memo>
+			<version>1</version>
+			<status>upload</status>
+		</attach>
+	</attachData>
+	<registerData>
+		<type>新收文流程</type>
+		<title>关于XXXXXXXXXXXXXXXXXXXXXXXXX</title>
+		<loginName>ST/G080090002502925</loginName>
+		<userName>孙佳伟</userName>
+		<deptId>2925</deptId>
+		<deptName>维保公司</deptName>
+		<autoLaunch>0</autoLaunch><!-- 0 手动，1自动 -->
+	</registerData>
+</root>

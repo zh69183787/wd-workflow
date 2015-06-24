@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!-- NOTE: For Hibernate Session Factory Use Only -->
+<hibernate-configuration> 
+  <session-factory> 
+  	<property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+    <property name="connection.pool_size">1</property>  
+    <property name="show_sql">true</property>  
+    <property name="format_sql">true</property>  
+    <property name="cache.provider_class">org.hibernate.cache.OSCacheProvider</property>  
+    <property name="cache.use_query_cache">true</property>  
+    <property name="query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</property>  
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>  
+    <property name="proxool.pool_alias">pool1</property>  
+    <property name="connection.SetBigStringTryClob">true</property>  
+    <property name="jdbc.batch_size">0</property>  
+    <property name="jdbc.use_streams_for_binary">true</property>  
+    <property name="max_fetch_depth">1</property>  
+   <!-- <prop key="hibernate.default_schema">XXXX</prop> -->
+  </session-factory> 
+</hibernate-configuration>

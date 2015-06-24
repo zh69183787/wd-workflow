@@ -1,0 +1,23 @@
+html,body {height:100%; margin:0px; font-size:12px;} 
+.f_window { 
+	//background-color: #FFCC66; 
+	border: 1px solid #ffffff; 
+	text-align: center; 
+	line-height: 40px; 
+	font-size: 12px; 
+	font-weight: bold; 
+	z-index:999; 
+	width: 560px; 
+	height: 360px; 
+	left:50%; 
+	top:50%; 
+	margin-left:-350px!important;/*FF IE7 该值为本身宽的一半 */ 
+	margin-top:-150px!important;/*FF IE7 该值为本身高的一半*/ 
+	margin-top:0px; 
+	position:fixed!important;/* FF IE7*/ 
+	position:absolute;/*IE6*/ 
+	_top:       expression(eval(document.compatMode && 
+	            document.compatMode=='CSS1Compat') ? 
+	            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/ 
+	            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/ 
+} 

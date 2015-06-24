@@ -1,0 +1,12 @@
+.fieldError {
+	border: 1px solid red !important;
+	background: #FBFCDA !important;
+}
+
+.fieldErrorDate {
+	
+	background-image: url("../images/icon_1.png");
+	background-position: right -718px;
+    background-repeat: no-repeat;
+	border: 1px solid red !important;
+}

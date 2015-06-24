@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<basicData>
+		<id>XXXXXXXXXXXXXXXXXXXXXXXXX</id>
+		<projectName>轨道交通3号线FAS、BAS系统大修改造项目</projectName>
+		<projectIdentifier>2012-运三公司-001-大修项目</projectIdentifier>
+		<projectNum>沪地铁投（2012）132号</projectNum>
+		<projectCompany>上海地铁第三运营有限公司</projectCompany>
+		<projectChargeDept>第三运营公司</projectChargeDept>
+		<projectCharge>沈光怡</projectCharge>
+		<contractIdentifier>运三-G-13-大修-001-03-00-招</contractIdentifier>
+		<contractSelfNum>运三-G-13-大修-001-03-00-招</contractSelfNum>
+		<contractName>轨道交通3号线FAS、BAS大修改造工程合同</contractName>
+		<contractMoney>1598.3326</contractMoney>
+		<contractMoneyType>总价闭口</contractMoneyType>
+		<contractMoneyTypeId>1</contractMoneyTypeId>
+		<contractBudget>2562.45</contractBudget>
+		<purchaseType>公开招标</purchaseType>
+		<purchaseTypeId>1</purchaseTypeId>
+		<contractType1>运维类</contractType1>
+		<contractType1Id>2</contractType1Id>
+		<contractType2>工程类</contractType2>
+		<contractType2Id>2</contractType2Id>
+		<contractGroup>成本外</contractGroup>
+		<contractGroupId>2</contractGroupId>
+		<oppositeCompany>上海市安装工程有限公司</oppositeCompany>
+		<dealPerson>阮方</dealPerson>
+		<passTime>2013-04-28</passTime>
+		<signTime>2013-05-07</signTime>
+		<execPeriodStart>2013-05-07</execPeriodStart>
+		<execPeriodEnd>2015-02-28</execPeriodEnd>
+		<dealDeptSuggest></dealDeptSuggest>
+		<remark></remark>
+	</basicData>
+	
+	<attachData>
+		<attach>
+			<fileName>沪申案-30-人大主办-390-运营三公司</fileName>
+			<fileExtName>docx</fileExtName>
+			<path>http://10.35.91.3:8108/SHCONTR/upload/contractRefUpload/5be4b7ab-9e2b-4d76-8fda-afdf2b1d0715.pdf
+			</path>
+			<fileSize>642723</fileSize>
+			<uploader>翁励彬</uploader>
+			<uploadDate>2014-03-10 10:52:08</uploadDate>
+			<operateTime>1394419928280</operateTime>
+			<appName>eam_http</appName>
+			<uploaderLoginName>G08007001124</uploaderLoginName>
+			<memo>合同及附件</memo>
+			<version>1</version>
+			<status>upload</status>
+		</attach>
+	</attachData>
+		
+	<optionData>
+		<choice>1</choice> <!-- 1 申报 2取消 -->
+		<remark>XXXXXXXXXXXXXXXXX</remark>
+	</optionData>
+
+	<registerData>
+		<type>合同后审流程</type>
+		<title>关于XXXXXXXXXXXXXXXXXXXXXXXXX</title>
+		<processName>合同后审流程</processName>
+		<incidentNo>11</incidentNo>
+		<loginName>ST/G080090002502925</loginName>
+		<userName>孙佳伟</userName>
+		<deptId>2925</deptId>
+		<deptName>维保公司</deptName>
+		<stepName>返回修改</stepName>
+		<autoLaunch>1</autoLaunch><!-- 0 手动，1自动 -->
+	</registerData>
+		
+</root>

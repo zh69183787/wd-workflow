@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class
+        name="com.wonders.send.model.bo.TFlowfunctionGuanLian"
+        table="T_FLOWFUNCTION_GUANLIAN"
+        dynamic-update="true"
+    >
+
+        <id name="sid" type="string">
+            <column name="SID" length="50" />
+            <generator class="uuid.hex">
+        	</generator>
+        </id>          
+		<property name="processName" type="string">
+            <column name="PROCESSNAME" length="200" />
+        </property>
+        <property name="incidentNo" type="string">
+            <column name="INCIDENTNO" length="10" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="200" />
+        </property>
+		<property name="displayName" type="string">
+            <column name="DISPLAYNAME" length="200" />
+        </property>
+		<property name="yewuId" type="string">
+            <column name="YEWU_ID" length="50" />
+        </property>
+		<property name="url" type="string">
+            <column name="URL" length="2000" />
+        </property>
+		<property name="content" type="string">
+            <column name="CONTENT" length="2000" />
+        </property>
+		<property name="removed" type="int">
+            <column name="REMOVED" length="1" />
+        </property>
+		<property name="operator" type="string">
+            <column name="OPERATOR" length="200" />
+        </property>
+				<property name="operateTime" type="string">
+            <column name="OPERATE_TIME" length="200" />
+        </property>
+		
+    </class>
+
+</hibernate-mapping>

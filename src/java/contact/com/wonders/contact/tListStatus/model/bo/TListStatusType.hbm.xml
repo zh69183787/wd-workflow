@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="com.wonders.contact.tListStatus.model.bo.TListStatusType"
+        table="T_LIST_STATUS_TYPE"
+        dynamic-update="true"
+    >
+<!--
+        <id
+            name="id"
+            column="ID"
+            type="java.lang.String"
+            unsaved-value="0"
+        >
+         
+            <generator class="native">
+                <param name="sequence">SEQ_DOC_RECEIVE</param>
+               
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-DocReceive.xml 
+                  containing the additional parameters and place it in your merge dir. 
+            
+            </generator>
+             
+        </id> --> 
+		<id
+            name="code"
+            column="code"
+            type="java.lang.String"
+            unsaved-value="undefined"
+        >
+        	<generator class="assigned">
+        	</generator>
+        </id>
+		<!-- 
+		private String code;//分类代码,汉语拼音或英文缩写，建议字母小写VARCHAR2(500)	N
+	private String name;//显示的内容VARCHAR2(500)	Y	
+	private String uptdate;//to_char(sysdate,'YYYY-MM-DD HH24:mi:ss')		更新的日期VARCHAR2(19)	Y
+	private String state;//当前行的状态（0-不可用， 1-可用）CHAR(1)	Y	'1'	
+	private String memo;//备注VARCHAR2(500)	Y
+		 -->
+        <property
+            name="name"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="name"
+            length="500"
+        />
+
+        <property
+            name="uptdate"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="uptdate"
+            length="19"
+        />
+
+        <property
+            name="state"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="state"
+            length="1"
+        />
+        
+
+        <property
+            name="memo"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="memo"
+            length="2000"
+        />
+		
+		 <set name="tListStatuses" inverse="true" cascade="all" > 
+		     <key column="infotype"/> 
+		     <one-to-many class="com.wonders.contact.tListStatus.model.bo.TListStatus"/> 
+	     </set> 
+
+    </class>
+
+</hibernate-mapping>

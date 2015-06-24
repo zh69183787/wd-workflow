@@ -1,0 +1,63 @@
+
+body,td,th {
+	font-family: ËÎÌו;
+	font-size: 12px;
+	color: #000000;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #9900CC;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+a {
+	font-size: 12px;
+}
+
+.btn{
+	border:1px #7D86A3 solid;
+	height:23px;
+	font-size:12px;
+	font-weight:normal;
+	color:#2C5567;
+	background: url(../images/desktop/images_green/button_bg.gif);
+	text-decoration: none;
+	cursor: hand;
+	letter-spacing: normal;
+	padding-top:2px;
+}
+
+.FixedTitleRow
+{
+    position: relative;
+    top: expression(this.offsetParent.scrollTop);
+    z-index: 10;
+    background-color: #E6ECF0;
+}
+
+.FixedTitleColumn
+{
+    position: relative;
+    left: expression(this.parentElement.offsetParent.scrollLeft);
+}
+
+.FixedDataColumn
+{
+    position: relative;
+    left: expression(this.parentElement.offsetParent.parentElement.scrollLeft);
+    background-color: #E6ECF0;
+}
+
+
+
+
